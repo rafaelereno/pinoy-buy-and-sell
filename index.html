@@ -1,10 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Pinoy Buy and Sell</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pinoy Buy & Sell</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    header {
+      background-color: #1e88e5;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .search-container {
+      margin: 1rem auto;
+      max-width: 600px;
+      display: flex;
+    }
+
+    .search-container input {
+      flex: 1;
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+      outline: none;
+    }
+
+    .search-container button {
+      padding: 0.7rem 1.2rem;
+      border: none;
+      background-color: #1e88e5;
+      color: white;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card h4 {
+      margin: 0.5rem;
+    }
+
+    .card p {
+      margin: 0.5rem;
+      color: gray;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Pinoy Buy and Sell!</h1>
-  <p>Inspired by Carousell and Lamudi. Made for Filipinos 🇵🇭</p>
+
+  <header>
+    <h1>Pinoy Buy & Sell</h1>
+    <p>A buy-and-sell platform inspired by Carousell, Lamudi, and Facebook Marketplace — made for Filipinos.</p>
+  </header>
+
+  <div class="search-container">
+    <input type="text" placeholder="Search products...">
+    <button>Search</button>
+  </div>
+
+  <!-- CATEGORY SECTION -->
+  <div style="max-width: 800px; margin: auto; padding: 0 1rem;">
+    <h3>Browse Categories</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+      <button style="flex: 1 0 120px; padding: 10px; border: none; border-radius: 6px; background-color: #e3f2fd; cursor: pointer;">Phones</button>
+      <button style="flex: 1 0 120px; padding: 10px; border: none; border-radius: 6px; background-color: #e3f2fd; cursor: pointer;">Electronics</button>
+      <button style="flex: 1 0 120px; padding: 10px; border: none; border-radius: 6px; background-color: #e3f2fd; cursor: pointer;">Cars</button>
+      <button style="flex: 1 0 120px; padding: 10px; border: none; border-radius: 6px; background-color: #e3f2fd; cursor: pointer;">Furniture</button>
+      <button style="flex: 1 0 120px; padding: 10px; border: none; border-radius: 6px; background-color: #e3f2fd; cursor: pointer;">Properties</button>
+      <button style="flex: 1 0 120px; padding: 10px; border: none; border-radius: 6px; background-color: #e3f2fd; cursor: pointer;">More</button>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://via.placeholder.com/200x150?text=Item+1" alt="Item 1" />
+      <h4>₱1,200 - Folding Table</h4>
+      <p>Pasay City</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/200x150?text=Item+2" alt="Item 2" />
+      <h4>₱600 - Mobile Case</h4>
+      <p>Parañaque</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/200x150?text=Item+3" alt="Item 3" />
+      <h4>₱9,500 - Secondhand Laptop</h4>
+      <p>Makati</p>
+    </div>
+  </div>
+
 </body>
 </html>
